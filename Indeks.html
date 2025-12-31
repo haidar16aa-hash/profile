@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You Lisa❤️</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #4b000f, #7a0c2e);
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #fff0f3;
+}
+
+.password-box, .card {
+    background: #fff5f7;
+    border-radius: 18px;
+    padding: 25px;
+    margin: 100px auto;
+    max-width: 420px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    color: #4b000f;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #a01f45;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 18px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 25px;
+    background: #8b1d3d;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a01f45;
+}
+
+.error {
+    color: #b4004e;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.locked {
+    font-size: 1.1em;
+    color: #8b1d3d;
+}
+
+.card {
+    display: none;
+    max-width: 650px;
+}
+
+.reason {
+    cursor: pointer;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background: #8b1d3d;
+    color: #fff;
+}
+
+.detail {
+    display: none;
+    padding: 12px;
+    margin-top: 8px;
+    background: #fdebed;
+    border-radius: 10px;
+    color: #4b000f;
+}
+
+.letter {
+    display: none;
+    white-space: pre-line;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+.fade {
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+<body>
+
+<!-- PASSWORD -->
+<div class="password-box fade" id="lock">
+    <h2>🔐 Akses Khusus</h2>
+    <p>Masukin password dulu ya Lisaa sayang 🤭</p>
+    <input type="password" id="password" placeholder="password nya apa yaa..">
+    <button onclick="checkPassword()">Buka 💌</button>
+    <div class="error" id="error"></div>
+</div>
+
+<h1 id="title" style="display:none;">10 Hal Kenapa Aku Suka Kamu ❤️ (coba klik salah satu alasan nya, itu ada alasan lagi 🗿)</h1>
+
+<!-- CONTENT -->
+<div class="card fade" id="content">
+
+    <div class="reason" onclick="toggle(this)">1. Kamu ga gatel an ama cowok.
+        <div class="detail">Kamu tau batas,walaupun rada jutek🗿, dan itu bikin aku ngerasa dihargai.</div>
+    </div>
+
+    <div class="reason" onclick="toggle(this)">2. Humor kamu lucu.
+        <div class="detail">Candaan kamu selalu bikin aku ketawa, apalagi senyum kamu yg manis banget🤭🤭.</div>
+    </div>
+
+    <div class="reason" onclick="toggle(this)">3. Kamu cantik, cakep, beautiful, otsukushi, Красивый, 아름다운, Hermoso, ayu.
+        <div class="detail">Dari segi mana pun kamu itu tipe aku banget🤭.</div>
+    </div>
+
+    <div class="reason" onclick="toggle(this)">4. Kamu selalu support aku.
+        <div class="detail">Aku nyaman cerita apa pun ke kamu dan kamu selalu nge dukung aku💕.</div>
+    </div>
+
+    <div class="reason" onclick="toggle(this)">5. Ga narsis.
+        <div class="detail">Aku suka cewek yang cantik, tapi jarang banget/gapernah mamerin foto nya.</div>
+    </div>
+    
+    <div class="reason" onclick="toggle(this)">6. Ga ngikutin standar TIKTOK.
+        <div class="detail">Kamu punya standar kamu sendiri dan aku suka banget sama itu.</div>
+    </div>
+    
+    <div class="reason" onclick="toggle(this)">7. Bisa masak.
+        <div class="detail">Aku suka banget kalo nanti... Pulang kerja, capek, trus ditungguin sama dimasakin makanan. Rasanya kayak beuh 🤭.</div>
+    </div>
+    
+    <div class="reason" onclick="toggle(this)">8. Perhatian.
+        <div class="detail">Aku suka banget ada orang yang sayang aku, terus perhatian sama aku.</div>
+    </div>
+    
+    <div class="reason" onclick="toggle(this)">9. Ga egois (walaupun gampang ga enakan🗿).
+        <div class="detail">Aku suka cewek yang kalo dia salah yaa ngaku, soal ga enakan kamu itu nunjukin kalo kamu suka berempati sama orang lain, walaupun kadang suka berlebihan.</div>
+    </div>
+    
+    <div class="reason" onclick="toggle(this)">10. Dari semuamuamua list tadi, ofc aku suka kamu karna kamu istri idaman🤭.
+        <div class="detail">Aku harap kita bisa bareng terus... </div>
+    </div>
+
+    <button onclick="showLetter()">Buka Surat Cinta 💌 (aku salting sendiri ngetik ini🗿🗿)</button>
+
+    <div class="letter fade" id="letter">
+Lisaa.. akuu sayang bgt sama kamu.. dari pertama kita ketemu, aku sendiri udh nyaman bgt sama kamu, walaupun bercanda kmu rada beda dari perempuan yg lain, itu yg buat kamu spesial, saat kamu tertawa senyuman mu sangat amat manis, walaupun aku tau saat itu kamu jg suka aku, dan aku masih bersama mantan ku, kamu tetep terlihat bahagia, sampe aku hampir salah mengira kalo kamu tuh gaada rasa sama aku, sampai pada waktu valentine, dimana kamu ngasih surat confess ke aku, trus kamu mulai ngedeketin aku, aku sedikit terhibur, ketika aku lagi sedih bgt dikhianatin sama mantan aku, aku merasa nyaman bgt kalo cerita sama kamu, udah banyak bgt hal yg aku ceritain ke kamu, dan kamu masih selalu mensupport aku dan menghibur aku, sampai aku tau Erika jg suka aku dan bukanya kalian saling bersaing, kalian malah saling mendukung, jujur aja, aku ngerasa aneh bgt ada di posisi kyk gitu, kaya jarang bgt ada org yg bener-bener mau sayang aku, kalian berdua ngasih aku hadiah, yg dimana... itu hadiah ulang tahun pertama yg pernah aku terima selama 15 tahun hidupku, aku jujur terharu bgt... aku terimakasih banyak sama kalian berdua sampai aku sendiri bingung harus pilih salah satu dari kalian yg bener bener sama-sama tulus, pada akhirnya aku memilih kamu... Lisaa, karna aku berfikir cuma kamu yg pantas buat aku, dan aku sendiri merasa belum pantas buat Erika, aku merasa dia sebenernya masih terlalu jauh buat aku. Dan sekarang.. Erika udh punya org yg dia sayang dan sayang sama dia, aku ngerasa emng Fahri tuh pantes buat dia. 
+Dan sekarang cuma kamu... Lisaa orang yang bener-bener aku sayang, aku cintai, udah banyak banget kenangan yang kita alami bersama, dan kenangan yang paling ku inget... Soal kamu yang cedera sehabis olahraga, jujur disitu aku merasa bersalah banget.... Maaf yaa sayang~ kalo aja aku nemenin kamu, kamu ga bakal kaya gitu😌, maaf bgt aku gabisa bantu banyak pas kamu cedera waktu itu, aku cuma bisa jenguk kamu, walaupun pas pulang nya aku dimarahin gara-gara pulang malem🗿, tapi setidaknya aku bisa ngeliat kamu udh gapapa waktu itu.....
+Dan yaaa itu aja sih, pesan yang suatu hari nanti bakal ku kasih ke kamu, dan aku berharap saat itu.... Kita masih bersama, masih saling sayang, dan kedepannya mungkin bisa lebih serius sama hubungan ini, walaupun cmn TTS(Teman Tapi Sayang) 🗿 sepanjang ini, tapi aku sangat mengharapkan kesetiaan dari kamu.... 
+Sekian aja sih pesan panjang ini dari aku, aku cuman mau ngasih tau kamu kalo... Aku bener-bener sayang sama kamu sampai kapanpun, kalo kita bisa serius in hubungan ini aku janji bakal sayang banget sama kamu sampai akhir hayat kita, walaupun rada alay🗿, tapi aku bakal serius kalo kamu mau nunggu aku sampai waktunya tiba.... Yaaa gitu aja Lissss.... Love you💕
+    </div>
+</div>
+
+<script>
+const correctPassword = "kasih aku pap dulu";
+let attempts = 0;
+const maxAttempts = 3;
+
+function checkPassword() {
+    const input = document.getElementById("password").value;
+    const error = document.getElementById("error");
+
+    if (input === correctPassword) {
+        document.getElementById("lock").innerHTML = `
+            <h2>💖 Password Benar</h2>
+            <p>Selamat datang, Sayang 🤍</p>
+            <p>Sabar yaa… ini khusus buat kamu , aku ngoding ini sambil salting sendiri🗿.</p>
+        `;
+        setTimeout(() => {
+            document.getElementById("lock").style.display = "none";
+            document.getElementById("title").style.display = "block";
+            document.getElementById("content").style.display = "block";
+        }, 2500);
+    } else {
+        attempts++;
+        if (attempts >= maxAttempts) {
+            document.getElementById("lock").innerHTML = `
+                <div class="locked">
+                    😤 Salah terus<br><br>
+                    Kalo mau lanjut…<br>
+                    <b>kasih aku pap dulu</b> 📸
+                </div>
+            `;
+        } else {
+            error.textContent = `Password salah (${attempts}/${maxAttempts})`;
+        }
+    }
+}
+
+function toggle(el) {
+    const detail = el.querySelector('.detail');
+    detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+}
+
+function showLetter() {
+    document.getElementById("letter").style.display = "block";
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+</script>
+
+</body>
+      </html>
