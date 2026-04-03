@@ -1,0 +1,57 @@
+/* ... (kode sebelumnya tetap sama) ... */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body { background-color: #0f172a; color: #f8fafc; overflow-x: hidden; }
+
+/* Navbar, Hero, About (sama seperti sebelumnya) */
+header { position: fixed; top: 0; width: 100%; padding: 20px 10%; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 800; }
+.logo span { color: #38bdf8; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 30px; }
+nav ul li a { text-decoration: none; color: white; transition: 0.3s; }
+nav ul li a:hover { color: #38bdf8; }
+
+.hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); }
+.hero h1 { font-size: 4rem; background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.btn { display: inline-block; margin-top: 25px; padding: 12px 30px; background: #38bdf8; color: #0f172a; text-decoration: none; border-radius: 50px; font-weight: 600; transition: 0.3s; }
+
+.about { padding: 100px 10%; text-align: center; }
+.section-title { margin-bottom: 50px; font-size: 2.5rem; }
+.about-card { background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); max-width: 800px; margin: 0 auto; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px; }
+.info-item { background: rgba(56, 189, 248, 0.1); padding: 15px; border-radius: 10px; }
+
+/* Styling Khusus Bagian Project */
+.projects { padding: 100px 10%; text-align: center; }
+
+.dev-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px dashed #38bdf8;
+    color: #38bdf8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dev-status p { font-weight: 500; font-style: italic; }
+
+.icons { font-size: 1.5rem; display: flex; gap: 10px; }
+
+/* Animasi Gear Berputar */
+.fa-spin {
+    animation: fa-spin 4s infinite linear;
+}
+
+footer { padding: 40px; text-align: center; font-size: 0.9rem; color: #64748b; }
